@@ -57,10 +57,25 @@
 - Fix attachment name decoding when 'charset' parameter exists in the headers (#9376)
 - Fix deprecated (in PHP 8.4) use of session_set_save_handler() (#9060)
 - Fix potential HTTP protocol version mismatch (#8982)
+- Fix regression where printing/scaling/rotating image attachments was broken (#9571)
+
+## Release 1.6.8
+
+- Managesieve: Protect special scripts in managesieve_kolab_master mode
 - Fix newmail_notifier notification focus in Chrome (#9467)
 - Fix fatal error when parsing some TNEF attachments (#9462)
 - Fix double scrollbar when composing a mail with many plain text lines (#7760)
 - Fix decoding mail parts with multiple base64-encoded text blocks (#9290)
+- Fix bug where some messages could get malformed in an import from a MBOX file (#9510)
+- Fix invalid line break characters in multi-line text in Sieve scripts (#9543)
+- Fix bug where "with attachment" filter could fail on some fts engines (#9514)
+- Fix bug where an unhandled exception was caused by an invalid image attachment (#9475)
+- Fix bug where a long subject title could not be displayed in some cases (#9416)
+- Fix infinite loop when parsing malformed Sieve script (#9562)
+- Fix bug where imap_conn_option's 'socket' was ignored (#9566)
+- Fix XSS vulnerability in post-processing of sanitized HTML content [CVE-2024-42009]
+- Fix XSS vulnerability in serving of attachments other than HTML or SVG [CVE-2024-42008]
+- Fix information leak (access to remote content) via insufficient CSS filtering [CVE-2024-42010]
 
 ## Release 1.6.7
 
